@@ -1,0 +1,7 @@
+1499139757616	Encapsulate field 'id'
+1499139771130	Encapsulate field 'name'
+1499139777471	Encapsulate field 'time'
+1499321297918	Encapsulate field 'sqlstring'
+1499486012389	Rename package 'com.spring.myBatis.mappers'
+1499486030527	Rename package 'com.spring.myBatis.model'
+1499486052385	Rename package 'com.spring.myBatis'

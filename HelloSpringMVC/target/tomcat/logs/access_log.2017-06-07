@@ -1,0 +1,5 @@
+127.0.0.1 - - [07/Jun/2017:07:25:26 -0700] "GET /HelloSpringMVC.war HTTP/1.1" 404 949 http-bio-8989-exec-4 48
+127.0.0.1 - - [07/Jun/2017:07:37:20 -0700] "GET /HelloSpringMVC/hello HTTP/1.1" 404 949 http-bio-8989-exec-6 3
+127.0.0.1 - - [07/Jun/2017:07:37:28 -0700] "GET /HelloSpringMVC/hello HTTP/1.1" 404 949 http-bio-8989-exec-7 5
+127.0.0.1 - - [07/Jun/2017:07:40:15 -0700] "GET /HelloSpringMVC/hello/ HTTP/1.1" 404 949 http-bio-8989-exec-9 5
+127.0.0.1 - - [07/Jun/2017:07:40:17 -0700] "GET /HelloSpringMVC/hello HTTP/1.1" 404 949 http-bio-8989-exec-10 5

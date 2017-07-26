@@ -1,0 +1,26 @@
+
+public class HeapSortCal {
+	public void maxHeap(int[] list,int parent,int point){
+		int lchild = parent<<1; //左孩子为父节点×2
+		int rchild =(parent<<1)+1;
+		int largest = parent;
+		//找出一颗子树中最大的节点
+		if(lchild<=point&& list[lchild]>list[largest]){
+			largest=lchild;
+		}
+		if(rchild<=point && list[rchild]>list[largest]){
+			largest = rchild;
+		}
+		if(largest!=parent){
+			int tmp = list[parent];
+			list[parent] = list[largest];
+			list[largest]=tmp;
+			maxHeap(list, largest, point);
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

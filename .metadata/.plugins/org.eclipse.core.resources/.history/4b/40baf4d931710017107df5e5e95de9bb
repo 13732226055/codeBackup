@@ -1,0 +1,15 @@
+import java.util.List;
+
+/** 
+* @author ZYJ 
+* @version 创建时间：Jul 25, 2017 4:40:38 AM 
+* @Details 
+*/
+public class Island2 {
+	public List<Integer> countIsland(int m ,int n ,int[][] position){
+		boolean map[][] = new boolean[m][n];
+		
+		return null;
+		
+	}
+}

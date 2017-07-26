@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"  
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"  
+    xmlns:aop="http://www.springframework.org/schema/aop"  
+    xsi:schemaLocation="  
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">  
+  	
+  	<context:component-scan base-package="com.defonds.bdp.cache.redis" />
+  	
+  	<bean id="myspringstruct"
+        class="com.spring.impl.myspringstruct"></bean>
+    <bean id="loggerTest"
+        class="com.spring.impl.loggerTest"></bean>
+    <!--  
+    <bean id="myspringservice"
+        class="com.spring.server.myspringservice">
+        <property name="myspring" ref="myspringstruct"/>
+        
+    </bean>  
+    --> 
+    <bean id="myspringservice"
+        class="com.spring.server.myspringservice">
+        <property name="myspring" ref="loggerTest"/>    
+    </bean>   
+    
+    <bean id="BookShopDaoImpl"
+    	class="com.spring.tx.BookShopDaoImpl"></bean>
+    <bean id="BookShopServiceImpl"
+    	class="com.spring.tx.BookShopServiceImpl"></bean> 
+    <bean id="CashierImpl"
+    	class="com.spring.tx.CashierImpl"></bean>
+    	
+    <bean id="BookShopDao"
+    	class="com.spring.tx.BookShopDao"></bean>	
+    <bean id="BookShopService"
+    	class="com.spring.tx.BookShopService"></bean>
+    <bean id="Cashier"
+    	class="com.spring.tx.Cashier">
+    	<property name="BookShopService" ref="BookShopServiceImpl"></property>
+    </bean>
+</beans>  

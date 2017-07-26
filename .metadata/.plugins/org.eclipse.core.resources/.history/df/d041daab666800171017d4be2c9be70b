@@ -1,0 +1,11 @@
+class A{
+	public final String = "111";
+}
+public class finalArrayTest {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

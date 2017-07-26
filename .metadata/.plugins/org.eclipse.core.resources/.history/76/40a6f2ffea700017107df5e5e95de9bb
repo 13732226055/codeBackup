@@ -1,0 +1,50 @@
+import java.awt.datatransfer.StringSelection;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/** 
+* @author ZYJ 
+* @version 创建时间：Jul 24, 2017 6:42:47 PM 
+* @Details ;
+* 
+*/
+/*有一个矩阵map，它每个格子有一个权值。从左上角的格子开始每次只能向右或者向下走，最后到达右下角的位置，
+ * 路径上所有的数字累加起来就是路径和，返回所有的路径中最小的路径和。
+ * 给定一个矩阵map及它的行数n和列数m，请返回最小路径和。保证行列数均小于等于100.
+测试样例：
+[[1,2,3],[1,1,1]],2,3
+返回：4*/
+public class walkSquare {
+	public static void main(String[] args) {
+		/*Scanner scanner = new Scanner(System.in);
+		String string= scanner.nextLine();*/
+		String string = "[[1,2,3],[1,1,1]],2,3";
+		Pattern pattern = Pattern.compile("\\[?\\[([0-9,]+)\\]\\]?");
+		List<String> list = new ArrayList<>();
+		int row = 0, column=0;
+		int[][] map = new int[row][column];
+	    Matcher matcher = pattern.matcher(string);
+	    while(matcher.find()){
+			list.add(matcher.group(1));
+		}
+	    pattern = Pattern.compile("\\],([0-9]+),([0-9]+)$");
+	    matcher = pattern.matcher(string);
+	    if(matcher.find()){
+	    	row = Integer.valueOf(matcher.group(1));
+	    	column = Integer.valueOf(matcher.group(2));
+	    }
+	    System.out.println(list);
+	    for(int i=0;i<row;i++){
+	    	String[] strings = list.get(i).split(",");
+	    	for(int j=0;j<column;j++)
+	    		map[i][j] = Integer.valueOf(strings[j]);
+	    }
+	    System.out.println(map);
+		//System.out.println(strings[0]);
+	}
+}

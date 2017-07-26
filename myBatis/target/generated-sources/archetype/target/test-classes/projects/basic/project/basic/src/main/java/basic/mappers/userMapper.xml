@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+					"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 传入参数时，如果参数不是模型而是是未定义过的基本类型，那么在sql语句中#{}中的变量名可以随便定义，可以与模型中的名字不一样 -->
+<mapper namespace="it.pkg.basic.mappers.userMapper">
+	<select id="selectUserById" parameterType="int" resultType="User">
+		select * from `users` where id=#{id}
+	</select>
+	
+ 	<!-- 多行查询，返回List<User>数组 -->
+	<resultMap type="User" id="resultListUser">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="time" property="time" />
+    </resultMap>
+    <select id="selectUsers" parameterType="string" resultMap="resultListUser">
+        select * from users where name like #{name}
+    </select>
+    
+    <!-- 用id作为主键插入记录 -->
+    <insert id="addUser" parameterType="User" 
+        useGeneratedKeys="true" keyProperty="id"> 
+        insert into users(name,time,id)  
+             values(#{name},#{time},#{id})  
+    </insert>
+	<!-- 使用User对象作为参数更新表 -->
+	<update id="updateUser" parameterType="User" >
+        update users set name=#{name},time=#{time} where id=#{id}
+    </update>
+    
+    <!-- 使用id作为参数删除数据 -->
+    <delete id="deleteUser" parameterType="int">
+        delete from users where id=#{id}
+    </delete>
+    
+    <update id="createTable" parameterType="string">
+    	${value} <!-- 如果参数为String且使用${}，则变量名统一使用value，否则会报getter的错误 -->
+   </update>
+   
+   <!-- User 联合文章进行查询 方法之一的配置 (多对一的方式)  -->    
+    <resultMap id="resultUserArticleList" type="Article">
+        <id property="id" column="aid" />
+        <result property="title" column="title" />
+        <result property="content" column="content" />
+        
+        <association property="user" javaType="User">
+            <id property="id" column="id" />
+            <result property="name" column="name" />
+            <result property="time" column="time" />            
+        </association>        
+    </resultMap>
+
+	<select id="getUserArticles" parameterType="int" resultMap="resultUserArticleList">
+       select users.id,users.name,users.time,article.id aid,article.title,article.content from users,article 
+              where users.id=article.userid and users.id=#{id}
+    </select>
+</mapper>

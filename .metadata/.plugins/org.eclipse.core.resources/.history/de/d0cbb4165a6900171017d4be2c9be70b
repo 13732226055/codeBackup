@@ -1,0 +1,12 @@
+
+public class TestHashmap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int h=11;
+		int key =11;
+		System.out.println((h = key.hashCode()) ^ (h >>> 16));
+		System.err.println(Integer.toBinaryString("11a".hashCode()));
+	}
+
+}

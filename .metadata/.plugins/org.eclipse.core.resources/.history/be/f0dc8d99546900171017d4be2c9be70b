@@ -1,0 +1,9 @@
+
+public class TestHashmap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.err.println(Integer.toBinaryString("11vcxvx".hashCode()));
+	}
+
+}

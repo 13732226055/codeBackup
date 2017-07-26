@@ -1,0 +1,12 @@
+package testMvn3.dependence;
+
+/**
+ * Hello world!
+ *
+ */
+public class IPV4 
+{
+    public void start(){
+    	System.out.print("This is IPv4 Start");
+    }
+}

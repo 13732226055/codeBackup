@@ -1,0 +1,10 @@
+127.0.0.1 - - [13/Jun/2017:00:55:22 -0700] "GET /HelloSpringMVC/user?name=admin HTTP/1.1" 404 949 http-bio-8989-exec-1 159
+127.0.0.1 - - [13/Jun/2017:00:55:22 -0700] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8989-exec-2 0
+127.0.0.1 - - [13/Jun/2017:00:55:22 -0700] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8989-exec-3 0
+127.0.0.1 - - [13/Jun/2017:00:59:42 -0700] "GET /HelloSpringMVC/user?name=admin HTTP/1.1" 404 949 http-bio-8989-exec-1 124
+127.0.0.1 - - [13/Jun/2017:00:59:45 -0700] "GET /HelloSpringMVC/user?name=admin HTTP/1.1" 404 949 http-bio-8989-exec-2 4
+127.0.0.1 - - [13/Jun/2017:01:03:28 -0700] "GET /HelloSpringMVC/user?name=admin HTTP/1.1" 200 298 http-bio-8989-exec-1 1643
+127.0.0.1 - - [13/Jun/2017:01:03:49 -0700] "GET /HelloSpringMVC/user?name HTTP/1.1" 200 284 http-bio-8989-exec-2 3
+127.0.0.1 - - [13/Jun/2017:01:33:21 -0700] "GET /HelloSpringMVC/web/fe/default/en/document/8108/spring-mvc-for-beginners HTTP/1.1" 200 422 http-bio-8989-exec-1 1805
+127.0.0.1 - - [13/Jun/2017:01:40:45 -0700] "GET /HelloSpringMVC/saveResult HTTP/1.1" 404 949 http-bio-8989-exec-3 12
+127.0.0.1 - - [13/Jun/2017:01:41:39 -0700] "GET /HelloSpringMVC/saveResult HTTP/1.1" 200 5 http-bio-8989-exec-1 206

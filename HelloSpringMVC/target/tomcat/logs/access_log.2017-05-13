@@ -1,0 +1,11 @@
+127.0.0.1 - - [13/May/2017:01:48:09 -0700] "GET /HelloSpringMVC/hello HTTP/1.1" 404 949 http-bio-8989-exec-1 112
+127.0.0.1 - - [13/May/2017:01:48:09 -0700] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8989-exec-2 4
+127.0.0.1 - - [13/May/2017:01:48:09 -0700] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8989-exec-3 4
+127.0.0.1 - - [13/May/2017:01:48:12 -0700] "GET /HelloSpringMVC/hello HTTP/1.1" 404 949 http-bio-8989-exec-4 3
+127.0.0.1 - - [13/May/2017:01:48:24 -0700] "GET /HelloSpringMVC/hello HTTP/1.1" 404 949 http-bio-8989-exec-5 3
+127.0.0.1 - - [13/May/2017:01:49:03 -0700] "GET /HelloSpringMVC/hello HTTP/1.1" 404 949 http-bio-8989-exec-6 2
+127.0.0.1 - - [13/May/2017:01:49:37 -0700] "GET /HelloSpringMVC/hello HTTP/1.1" 404 949 http-bio-8989-exec-7 2
+127.0.0.1 - - [13/May/2017:01:49:57 -0700] "GET /HelloSpringMVC/hello HTTP/1.1" 404 949 http-bio-8989-exec-8 2
+127.0.0.1 - - [13/May/2017:01:50:05 -0700] "GET / HTTP/1.1" 200 279 http-bio-8989-exec-9 1109
+127.0.0.1 - - [13/May/2017:01:50:34 -0700] "GET /HelloSpringMVC HTTP/1.1" 404 949 http-bio-8989-exec-10 3
+127.0.0.1 - - [13/May/2017:01:50:42 -0700] "GET /spring-mvc HTTP/1.1" 404 949 http-bio-8989-exec-1 5

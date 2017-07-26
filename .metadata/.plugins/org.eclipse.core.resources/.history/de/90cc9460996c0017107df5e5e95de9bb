@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Huffman {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i=1234;
+		int count =0;
+		String binary=Integer.toBinaryString(i);
+		System.err.println(binary);
+		for(int j=0;j<binary.length();j++){
+			count += binary.charAt(j)-48;
+		}
+		System.err.println(count);
+		
+		Scanner scanner=new Scanner(System.in);
+		String input = scanner.nextLine();
+		getuffman(input);
+	}
+	public static int getuffman(String input){
+		ArrayList<Integer> arrayList = new ArrayList<>();
+		for (String string : input.split(",")) {
+			arrayList.add(Integer.parseInt(string));
+		}
+		while(arrayList.size()>2){
+			Collections.sort(arrayList);
+			int tmp = arrayList.get(0)+arrayList.get(1);
+			arrayList.remove(0);
+			arrayList.remove(0);
+			arrayList.add(tmp);
+		}
+		System.out.println(arrayList);
+		return 0;
+	} 
+
+}

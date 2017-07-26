@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+/** 
+* @author ZYJ 
+* @version 创建时间：Jul 25, 2017 1:16:31 AM 
+* @Details 
+*/
+public class Island {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int map[][] = {{1,1,1,0,0,0},
+					   {1,1,0,0,0,0},
+					   {1,0,0,0,0,1},
+					   {1,1,0,0,1,1},
+					   {0,0,0,1,0,0}
+					};
+		countIsland(map);
+	}
+
+}

@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Scanner;
+
+import javax.print.attribute.standard.RequestingUserName;
+class Node<T> implements Comparable<Node<T>>{
+	private T date;
+	private int weight;
+	private Node<T> left;
+	private Node<T> right;
+	
+	public Node(T date,int weight){
+		this.date=date;
+		this.weight=weight;
+	}
+
+	@Override
+	public int compareTo(Node<T> o) {
+		// TODO Auto-generated method stub
+		return (return 0);
+	}
+	
+}
+public class Huffman {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i=1234;
+		int count =0;
+		String binary=Integer.toBinaryString(i);
+		System.err.println(binary);
+		for(int j=0;j<binary.length();j++){
+			count += binary.charAt(j)-48;
+		}
+		System.err.println(count);
+		
+		Scanner scanner=new Scanner(System.in);
+		String input = scanner.nextLine();
+		if(input.length()!=0)
+			getHuffman(input);
+	}
+	
+}

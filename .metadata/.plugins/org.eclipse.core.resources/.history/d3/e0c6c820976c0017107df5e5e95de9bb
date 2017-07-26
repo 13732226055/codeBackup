@@ -1,0 +1,18 @@
+
+public class Huffman {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i=1234;
+		int count =0;
+		String binary=Integer.toBinaryString(i);
+		System.err.println(binary);
+		for(int j=0;j<binary.length();j++){
+			count += binary.charAt(j)-48;
+		}
+		System.err.println(count);
+		
+		
+	}
+
+}
