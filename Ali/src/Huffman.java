@@ -94,7 +94,6 @@ public class Huffman {
 		if(pNode == null )return 0;
 		System.err.println(pNode);
 		if(pNode.getData()==null){
-			
 			depth++;
 			System.err.println("Add depth:"+depth);
 			return dfstravel(pNode.getLeft(),depth)+dfstravel(pNode.getRight(),depth);

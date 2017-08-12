@@ -64,7 +64,7 @@ public class countWays {
 	public static void breath(int[][] dp){
 		for(int i=0,j=0;i<dp.length;i++){
 			for(j=0;j<dp[i].length;j++)
-				System.out.print(dp[i][j]+" ");
+				System.out.format("%2d ", dp[i][j]);
 			System.out.println();
 		}
 		System.out.println("---------------------------");
@@ -72,10 +72,10 @@ public class countWays {
 	}
 	public static void breath(int[] dp){
 		for(int i=0,j=0;i<dp.length;i++){
-			System.out.print(dp[i]+" ");
+			System.out.format("%2d ", dp[i]);
 			//System.out.println();
 		}
-		System.err.println();
+		System.out.println();
 				
 	}
 	public static int advancedCountWay(int[] penny, int aim){
