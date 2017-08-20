@@ -2,6 +2,8 @@ import java.util.Scanner;
 import java.util.function.IntPredicate;
 import java.util.regex.Pattern;
 
+import Wangyi.countWays;
+
 /** 
 * @author ZYJ 
 * @version 创建时间：Aug 8, 2017 7:22:46 PM 

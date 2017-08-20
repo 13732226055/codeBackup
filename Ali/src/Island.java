@@ -2,6 +2,8 @@ import java.awt.Color;
 import java.util.Scanner;
 import java.util.Stack;
 
+import Wangyi.countWays;
+
 /** 
 * @author ZYJ 
 * @version 创建时间：Jul 25, 2017 1:16:31 AM 

@@ -39,7 +39,8 @@ public class DarkNum {
 		//假设一个长度为n的字符串是黑暗的，
 		//假设该字符串中，子串{n-2,n-1,n}的第n个字符的可能性由第n-1和第n-2个字符决定，那么可以推出第n个字符的可能性f(n) = x*d(n)+ y*s(n),
 		//其中d(n)表示该子串{n-2,n-1,n}的前两个字符不相同，如AB#，s(n)表示相同，如AA#。那么f(n)=2d(n)+3s(n),
-		//than f(n) = 2*(d(n) + s(n)) +s(n), besides, d(n) IN {AB#,AC#,BC#,BA#,BC#,CA#,CB#}, S(n) IN {AA#,BB#,CC#} ,
+		//than f(n) = 2*(d(n) + s(n)) +s(n), besides, d(n) IN {AB#,AC#,BC#,BA#,BC#,CA#,CB#}, 
+		//S(n) IN {AA#,BB#,CC#} ,
 		// SO, 	d(n)+s(n)=f(n-1);
 		// More, for 4 words,s(n) in {#AA#,#BB#,#CC#} => S(N)=s(n-1)+d(n-1), in other word, {AAA#,BBB#,CCC#}+{[B,C]AA#,[A,C]BB#,[A,B]CC#}
 		// => f(n) = 2f(n-1)+s(n-1)+d(n-1)=2f(n-1)+f(n-2), We can using dynamic planing to solve it.

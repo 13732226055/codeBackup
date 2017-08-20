@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import Wangyi.countWays;
+
 /** 
 * @author ZYJ 
 * @version 创建时间：Aug 8, 2017 6:51:44 PM 
