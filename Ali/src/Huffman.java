@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
@@ -128,6 +129,7 @@ public class Huffman {
 			for(int j =0;j<strings.length;j++){
 				nodes.add(new Node("node_"+j, Integer.valueOf(strings[j])));
 			}
+			
 			Node root = createTree(nodes);
 			System.err.println(breath(root));
 			System.err.println(dfstravel(root, 0));

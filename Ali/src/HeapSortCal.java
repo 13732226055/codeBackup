@@ -29,7 +29,7 @@ public class HeapSortCal {
 		}
 	}
 	public void heapSort(int list[],int point){
-		while(point>1){
+		while(point>=1){
 			
 			int tmp=list[point];
 			list[point]=list[1];
@@ -40,7 +40,7 @@ public class HeapSortCal {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int list[]=new int[100];
+		int list[]=new int[10];
 		list[1]=1;
 		list[2]=5;
 		list[3]=4;
@@ -53,7 +53,7 @@ public class HeapSortCal {
 		System.out.println("");
 		HeapSortCal hs=new HeapSortCal();
 		hs.build_maxHeap(list, 7);
-	
+		countWays.breath(list);
 		hs.heapSort(list, 7);
 		for(int i=1;i<=7;i++)
 			System.out.print(list[i]);

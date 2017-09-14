@@ -3,9 +3,10 @@ import java.util.Scanner;
 public class MaxSubSequence {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		int n = scan.nextInt();
-		scan.nextLine();
+//		int n = scan.nextInt();
+//		scan.nextLine();
 		String[] strings = scan.nextLine().split(" ");
+		int n = strings.length;
 		int[] nums = new int[n];
 		int i=0;
 		for (String string : strings) {
